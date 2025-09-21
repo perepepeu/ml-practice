@@ -31,5 +31,8 @@ for epoch in range(epochs): # Training loop
     z = w * x + b  # Weighted sum
     a = sigmoid(z)  # Activation
 
-    print("Output after training:")
-    print(f"Output: {a}, Desired: {y}")
+    if epoch % 2 == 0:  # Print every 2 epochs
+        print(f"Epoch {epoch}: Output: {a}, Desired: {y}")
+
+print("Output after training:")
+print(f"Output: {a}, Desired: {y}")
