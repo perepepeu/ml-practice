@@ -14,7 +14,7 @@ w = 0.5
 b = 1
 
 lr = 0.1  # Learning rate
-epochs = 10  # Number of training iterations
+epochs = 100  # Number of training iterations
 
 for epoch in range(epochs): # Training loop
     z = w * x + b  # Weighted sum
@@ -31,7 +31,7 @@ for epoch in range(epochs): # Training loop
     z = w * x + b  # Weighted sum
     a = sigmoid(z)  # Activation
 
-    if epoch % 2 == 0:  # Print every 2 epochs
+    if epoch % 10 == 0:  # Print every 10 epochs
         print(f"Epoch {epoch}: Output: {a}, Desired: {y}")
 
 print("Output after training:")
